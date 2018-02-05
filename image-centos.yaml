@@ -1,0 +1,15 @@
+schema_version: 1
+
+name: "jboss/openjdk18-centos7"
+description: "Base image with OpenJDK 8 on CentOS 7"
+version: "1.2"
+from: "jboss/base-centos7:1.2"
+
+platform: centos:7
+
+modules:
+  repositories:
+  - name: jboss.openjdk18-rhel7.image.repo
+    path: modules/image
+  install:
+  - name: jboss.openjdk18.image
